@@ -10,11 +10,13 @@ import { Pagination } from "swiper/modules";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { AppLoading } from "./Loader";
 
 const LocationCarousal = ({ dataType, boxTitle, marginTop, base_url, IMAGE_URL }) => {
   // console.log(IMAGE_URL, "dataType");
   const [activeIndex, setActiveIndex] = useState(0);
   const [groupedData, setGroupedData] = useState({});
+  const [loader, setLoader] = useState(false)
   const swiperRef = useRef(null);
   const locations = ["delhi", "mumbai", "jaipur", "hyderabad", "kolkata", "Explore More"];
   const router = useRouter();
@@ -70,6 +72,7 @@ const LocationCarousal = ({ dataType, boxTitle, marginTop, base_url, IMAGE_URL }
             ))}
           </ul>
         </div>
+        {loader && <AppLoading />}
         <div className="sliderBox mt-8 w-full h-[340px] mb-12 swiper1">
           <Swiper
             ref={swiperRef}
@@ -85,6 +88,7 @@ const LocationCarousal = ({ dataType, boxTitle, marginTop, base_url, IMAGE_URL }
               filteredData.map((item) => (
                 <SwiperSlide key={item._id} className="p-1 ml-2 relative cursor-pointer">
                   <Link href={`/hotel-detail/${item._id}`}>
+                    <div onClick={() => setLoader(true)}>
                       <div className="imageDiv relative h-[55%] w-full bg-red-50 rounded-[18px] overflow-hidden">
                         <Image src={`${IMAGE_URL}/${item.bedroomPicture[0]}`} width={100} height={100} alt={item.propertyName} />
                       </div>
@@ -104,6 +108,7 @@ const LocationCarousal = ({ dataType, boxTitle, marginTop, base_url, IMAGE_URL }
                       <button className="h-10 w-10 absolute bottom-[6px] right-1 rounded-full flex justify-center items-center border-2 transition-all border-[#000] border-opacity-35 hover:bg-black hover:text-white">
                         <ArrowForwardIosIcon />
                       </button>
+                    </div>
                   </Link>
                 </SwiperSlide>
               ))

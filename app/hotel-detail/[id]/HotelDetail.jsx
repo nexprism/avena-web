@@ -31,6 +31,7 @@ import moment from "moment/moment";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
+import { AppLoading } from "@/components/Loader";
 gsap.registerPlugin(ScrollTrigger);
 
 const HotelDetail = ({ propId, base_url, IMAGE_URL }) => {
@@ -45,6 +46,7 @@ const HotelDetail = ({ propId, base_url, IMAGE_URL }) => {
   const [message, setMessage] = useState("");
   const [disableDates, setDisableDates] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [loader, setLoader] = useState(false);
   const [age, setAge] = useState("");
 
   const BookingOpen = () => {
@@ -212,6 +214,7 @@ const HotelDetail = ({ propId, base_url, IMAGE_URL }) => {
       </div>
 
       <div className="min-h-[70vh] flex flex-col items-center w-full mt-4 ">
+        {loader ? <AppLoading /> : null}
         <div className="wrapper  w-[95%]  overflow-hidden">
           <div className="image !h-[40vh] lg:!h-[70vh] w-[100%]  swiper3 overflow-hidden">
             <Swiper slidesPerView={"auto"} spaceBetween={15} freeMode={true} modules={[FreeMode, Pagination]} className="mySwiper">
@@ -459,7 +462,7 @@ const HotelDetail = ({ propId, base_url, IMAGE_URL }) => {
                 </div>
               ) : (
                 <Link href={`/check-out/${guests}${selectedDates.length > 0 ? `/${selectedDates[0].format("YYYY-MM-DD")}/${selectedDates[1].format("YYYY-MM-DD")}` : ""}/${propId}`}>
-                  <span className="py-[18px] px-6 w-[86%] text-sm whitespace-nowrap min-w-[300px] bg-[#5D0E41] text-white transition-all hover:bg-[#000] mt-4 rounded-md font-primaryMedium grid place-items-center">
+                  <span className="py-[18px] px-6 w-[86%] text-sm whitespace-nowrap min-w-[300px] bg-[#5D0E41] text-white transition-all hover:bg-[#000] mt-4 rounded-md font-primaryMedium grid place-items-center" onClick={() => setLoader(true)}>
                     Book Now
                   </span>
                 </Link>
@@ -564,7 +567,7 @@ const HotelDetail = ({ propId, base_url, IMAGE_URL }) => {
                         </div>
                       ) : (
                         <Link href={`/check-out/${guests}${selectedDates.length > 0 ? `/${selectedDates[0].format("YYYY-MM-DD")}/${selectedDates[1].format("YYYY-MM-DD")}` : ""}/${propId}`}>
-                          <span className="py-[18px] px-6 w-full  text-sm bg-[#5D0E41] text-white transition-all hover:bg-[#000] mt-4 rounded-md font-primaryMedium grid place-items-center">
+                          <span className="py-[18px] px-6 w-full  text-sm bg-[#5D0E41] text-white transition-all hover:bg-[#000] mt-4 rounded-md font-primaryMedium grid place-items-center" onClick={() => setLoader(true)}>
                             Book Now
                           </span>
                         </Link>

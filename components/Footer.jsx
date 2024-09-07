@@ -11,9 +11,7 @@ const Footer = () => {
       <div className="w-[85%] flex flex-wrap justify-between gap-10 text-white pt-8">
         <div className="box1 min-w-[250px] mr-8 flex-1  max-w-[300px]">
           <h2 className="text-5xl md:text-3xl font-primaryBold mb-4">AVENA</h2>
-          <p className="opacity-[0.6] text-sm">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, eligendi! Id, maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quae quibusdam cupiditate.
-          </p>
+          <p className="opacity-[0.6] text-sm">Welcome to Avena, offering diverse accommodations from Apartments to Villas, Resorts, and Hotels, tailored to your unique needs.</p>
           <button className="p-3 pl-10 pr-10 mt-8 bg-[#5D0E41] text-white transition-all hover:bg-[#fff] hover:text-black font-Barlow rounded-md">Explore More</button>
         </div>
 
@@ -57,7 +55,7 @@ const Footer = () => {
               <li className="mb-2">+919226376357</li>
             </Link>
             <li className="mb-2 max-w-[300px]">Vijayanand Society, Plot no 20, Narendra Nagar, Somalwada, Nagpur Maharashtra 440015</li>
-            
+
           </ul>
         </div>
         <div className="box4 min-w-[250px] flex-1 max-w-[240px]">
@@ -76,16 +74,16 @@ const Footer = () => {
             <li className="mb-2 max-w-[300px]"></li>
           </ul>
           <div className="flex gap-3 mt-6">
-              <Link href={"https://instagram.com"}>
-                <InstagramIcon />
-              </Link>
-              <Link href={"https://facebook.com"}>
-                <FacebookIcon />
-              </Link>
-              <Link href={"https://x.com"}>
-                <XIcon />
-              </Link>
-            </div>
+            <Link href={"https://instagram.com"}>
+              <InstagramIcon />
+            </Link>
+            <Link href={"https://facebook.com"}>
+              <FacebookIcon />
+            </Link>
+            <Link href={"https://x.com"}>
+              <XIcon />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
