@@ -1,0 +1,96 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper4 .swiper-slide {
+    font-size: 18px;
+    background: transparent;
+    min-width: 200px !important;
+    max-width: 200px !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  
+    /* Center slide text vertically */
+    align-items: center;
+    transition: all ease-in-out 0.15s;
+  }
+  
+  .swiper4 .swiper-slide img {
+    display: block;
+    /* width: 100%; */
+    height: 160px;
+    object-fit: contain;
+  }
+  
+  .swiper4 .slick-dots {
+    margin-top: -100px;
+  }
+  .swiper4 .slick-dots li button::before {
+    font-size: 13px;
+  }
+  .swiper4 .slick-dots li.slick-active button::before {
+    font-size: 15px;
+    color: #702b58;
+  }
+
+  /* Styles for Swiper navigation arrows */
+  .swiper4 .swiper-button-next,
+  .swiper4 .swiper-button-prev {
+  color: black;
+  
+  opacity: 0.6;
+  background: rgba(0, 0, 0, 0.2); /* Optional: to make the buttons stand out */
+  border-radius: 50%;
+}
+
+  .swiper4 .swiper-button-next:after,
+  .swiper4 .swiper-button-prev:after {
+  font-size: 20px;
+}
+
+
+  .swiper4 .swiper-button-next {
+  right: 10px;
+  width:44px;
+  scale: 0.7;
+}
+
+  .swiper4 .swiper-button-prev {
+  left: 10px;
+  width:44px;
+  scale: 0.7;
+}
+
+.common_loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.common_loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-bottom: 4px solid #702b58;
+  border-left: 4px solid transparent;
+}
+
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}

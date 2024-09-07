@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper1 .swiper-slide {
+  font-size: 18px;
+  background: #fff;
+  min-width: 225px !important;
+  max-width: 230px !important;
+  border-color: #00000023 !important;
+  border-width: 2px;
+  border-radius: 20px;
+
+  /* Center slide text vertically */
+  align-items: center;
+  transition: all ease-in-out 0.15s;
+}
+.swiper1 .swiper-slide:hover {
+  border-color: #5d0e4186 !important;
+  border-width: 2px;
+  border-radius: 18px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.267);
+}
+
+.swiper1 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slick-dots {
+  margin-bottom: 34px;
+}
+.slick-dots li button::before {
+  font-size: 13px;
+}
+.slick-dots li.slick-active button::before {
+  font-size: 15px;
+  color: #702b58;
+}
+
+@layer components {
+  /* .border {
+    border: 1px solid black;
+    background:  border-box linear-gradient(rgb(255 255 255),);
+  } */
+}
+
+@layer utilities {
+  .backdrop-blur {
+    backdrop-filter: blur(13.8px);
+    -webkit-backdrop-filter: blur(13.8px);
+  }
+}
+
+/* @font-face {
+  font-family: "Regular";
+  src: local("Montserrat-Regular"), url("/Fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "light";
+  src: local("Montserrat-Light"), url("/Fonts/Montserrat-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Medium";
+  src: local("Montserrat-Medium"), url("/Fonts/Montserrat-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Bold";
+  src: local("Montserrat-Bold"), url("/Fonts/Montserrat-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "fatface";
+  src: local("AbrilFatface-Regular"), url("/Fonts/AbrilFatface-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Barlow";
+  src: local("Barlow-Medium"), url("/Fonts/Barlow-Medium.ttf") format("truetype");
+} */
+
+/* @layer base{
+  dis-flex{
+      @apply flex justify-center aligc
+  }
+} */
+
+.active {
+  border-color: #702b58aa;
+  border-width: 2px;
+  background-color: #5d0e4183;
+  color: #5d0e41;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.swiper2 {
+  width: 100%;
+  height: 90%;
+}
+
+.swiper2 .swiper-slide {
+  font-size: 18px;
+  width: 384px !important;
+
+  /* Center slide text vertically */
+  align-items: center;
+  transition: all ease-in-out 0.15s;
+}
+
+.swiper2 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper2 .swiper-slide .swiper-button-next::after {
+  position: absolute;
+  top: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.swiper3 {
+  width: 100%;
+  height: 70vh;
+}
+
+.swiper3 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  background: #645555;
+  min-width: 380px;
+  max-width: 550px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper3 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Add this to your global CSS file or a CSS module */
+.sticky-container {
+  position: relative;
+}
+
+.sticky-content {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 20px; /* Adjust based on your design */
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+.custom-calendar .ant-picker-panel-container {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.custom-calendar .ant-picker-panels {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-calendar .ant-picker-panel {
+  width: 100%;
+}
